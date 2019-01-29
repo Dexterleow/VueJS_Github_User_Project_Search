@@ -20,7 +20,24 @@ export default {
   },
   methods: {
     search: function() {
-      // ...
+      this.searching = true;
+
+      const GitHub_Base_Url = "https://api.github.com/users";
+
+      fetch(`${GitHub_Base_Url}/${this.username}`)
+        .then(response => response.text())
+        .then(responseText => {
+
+          this.searching = false;
+          // console.log(responseText);
+          
+          const githubSearchResultText = JSON.parse(responseText);
+          
+          console.log("githubSearchResultText", githubSearchResultText);
+        })
+        .catch(error => {
+          console.error(error);
+        });
     }
   }
 };
