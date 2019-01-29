@@ -23,16 +23,16 @@ export default {
       this.searching = true;
 
       const GitHub_Base_Url = "https://api.github.com/users";
+      const GitHub_User_Repo = "repos?per_page=100"
 
-      fetch(`${GitHub_Base_Url}/${this.username}`)
+      fetch(`${GitHub_Base_Url}/${this.username}/${GitHub_User_Repo}`)
         .then(response => response.text())
         .then(responseText => {
-
           this.searching = false;
           // console.log(responseText);
-          
+
           const githubSearchResultText = JSON.parse(responseText);
-          
+
           console.log("githubSearchResultText", githubSearchResultText);
         })
         .catch(error => {
