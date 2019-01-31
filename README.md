@@ -14,12 +14,11 @@ npm run serve
 ```
 npm run build
 ```
-<!-- ### Run your tests
+### Run your tests at test folder (Basic API test with Mocha)
 ```
-npm run test
+mocha 
 ```
-
-### Lints and fixes files
+<!-- ### Lints and fixes files
 ```
 npm run lint
 ``` -->
@@ -41,6 +40,7 @@ npm run lint
 #### When clicked on a specific project, and the readme can't be found, it will show an error message "There was an error loading contents :/"
 
 ![](./github-search/src/assets/github_user_search_readme_error.png)
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
